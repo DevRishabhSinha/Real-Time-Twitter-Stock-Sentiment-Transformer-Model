@@ -1,0 +1,132 @@
+body {
+    background-color: #1A1A1A !important;
+    color: #FFA114;
+    font-family: "Times New Roman", Times, serif;
+}
+input[type="text"] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+}
+
+h1 {
+    color: white;
+}
+
+p:hover {
+    color: #FFA114;
+}
+
+input[type="submit"] {
+    background-color: #292928;
+    color: #FFA114;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #292928;
+    box-shadow: 0px 18px 26px 0px rgba(0,0,0,0.3);
+    background-color: #FFA114;
+    color: #000000;
+    /* transitions make the change gradual rather than instant */
+    transition: box-shadow 0.4s ease;
+}
+
+.display {
+    background-color: #373636;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.tweets, .sentiment, .future {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #292928;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #ecf0f1;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+    /* add your existing styles here */
+}
+
+.future p:nth-child(even) {
+    background-color: #373636;
+    border-radius: 10px;
+    padding: 12.5px;
+}
+
+.future p:nth-child(odd) {
+    background-color: #292928;
+    padding: 12.5px;
+}
+
+.tweets p:nth-child(even) {
+    background-color: #373636;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.tweets p:nth-child(odd) {
+    background-color: #292928;
+    padding: 10px;
+}
+
+.tweets:hover, .sentiment:hover, .future:hover {
+    box-shadow: 0px 18px 26px 0px rgba(0,0,0,0.3);
+    /* transitions make the change gradual rather than instant */
+    transition: box-shadow 0.4s ease;
+}
+
+#loading {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba( 255, 255, 255, .8 ) url('path_to_your_loading_gif.gif') 50% 50% no-repeat;
+}
+
+.no-js #loader {
+  display: none;
+}
+.js #loader {
+  display: block;
+  opacity: 1;
+}
+
+.positive_display {
+    color: green;
+    color: red;
+    background-color: #373636;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.positive {
+    color: green;
+
+}
+
+.negative {
+    color: red;
+}
+
+.negative_display {
+    color: red;
+    background-color: #373636;
+    border-radius: 10px;
+    padding: 15px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Sentiment Analysis</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bokeh/3.0.1/bokeh.min.js"
+            integrity="sha512-p7EUyPmeDeOwHiu7fIZNboAcQLxei3sWtXoHoShWWiPNUSRng/Xs5JPcaFPRa4dKy9IuHjyIQuLE4caGCwuewA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<div class="future"><h1 class="text-center">Stock Transformer Analyzer</h1>
+</div>
+
+<div class="d-flex justify-content-center">
+    <form method="POST">
+        <input type="text" name="stock_label" placeholder="Enter a stock label" required>
+        <input type="submit" value="Predict">
+    </form>
+</div>
+
+{% if avg_sentiment is not none %}
+<div class="sentiment">
+    <div class="display">
+        <h2>
+            Average Sentiment: {{ avg_sentiment }}
+            (<span class="{{ 'positive' if avg_sentiment_label == 'POSITIVE' else 'negative' }}">
+            {{ avg_sentiment_label }}
+        </span>)
+        </h2>
+        <h2>Predicted Close Price for Today: {{ predicted_close_today }}</h2>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        {{ script | safe }}
+        {{ div | safe }}
+    </div>
+</div>
+<style>
+    .tweets a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+
+
+</style>
+<div class="tweets">
+    <h2>Latest Tweets</h2>
+    {% for tweet in tweets_text %}
+    <p><a href="{{ tweet[3] }}" target="_blank">{{ tweet[0] }} (Sentiment: {{ tweet[1] }} -
+        <span class="{{ 'positive' if tweet[2] == 'POSITIVE' else 'negative' }}">
+            {{ tweet[2] }}
+        </span>)</a>
+    </p>
+    {% endfor %}
+</div>
+
+<style>
+    .future a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+
+
+</style>
+<div class="future">
+    <h2>Future Stock Close Prices</h2>
+    {% for prediction in predicted_closes %}
+    <p><a href="https://finance.yahoo.com/quote/{{ stock_label }}">{{ prediction[0] }}: {{ prediction[1] }}</a></p>
+    {% endfor %}
+</div>
+{% endif %}
+</body>
+</html>
