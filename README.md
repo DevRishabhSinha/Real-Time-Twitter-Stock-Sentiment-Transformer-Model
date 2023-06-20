@@ -22,6 +22,8 @@ The following technologies and libraries are used:
 
 * **Bokeh**: Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. It is used to create a line plot of real-time and predicted stock prices.
 
+<img width="1490" alt="Screenshot 2023-06-19 at 11 07 51 PM" src="https://github.com/DevRishabhSinha/Real-Time-Twitter-Stock-Sentiment-Transformer-Model/assets/127776575/d54da6c8-84fe-4be8-9fa8-fc302e4885bd">
+
 # Workflow
 1. The tool first authenticates the user's Twitter account to interact with the Twitter API using the Tweepy's OAuthHandler.
 
