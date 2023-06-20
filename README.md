@@ -43,6 +43,8 @@ The following technologies and libraries are used:
 
 9. Finally, the Flask application renders an HTML page displaying the average sentiment, predicted closing price, relevant tweets, and the Bokeh plot.
 
+<img width="1495" alt="Screenshot 2023-06-19 at 11 08 02 PM" src="https://github.com/DevRishabhSinha/Real-Time-Twitter-Stock-Sentiment-Transformer-Model/assets/127776575/8c5432a6-5b21-4366-b33b-7979bfa9051b">
+
 Running the Application
 To run the application, ensure that all the required libraries are installed. These can be installed using pip:
 
