@@ -1,7 +1,7 @@
 # Real-Time-Twitter-Stock-Sentiment-Transformer-Model
 The Real-Time Twitter Stock Sentiment Analysis used Python, Transformers, and Twitter API to analyze stock sentiments from real-time tweets. It involved data acquisition, preprocessing, Transformer-based model training, real-time sentiment classification, and visualizing sentiment trends. Key technologies included TensorFlow, Keras, and Tweepy. This tool integrates sentiment analysis and stock price prediction into a web application that allows users to visualize predicted stock prices, alongside sentiment analysis of relevant tweets. The tool leverages the Twitter API for sentiment analysis, and Yahoo Finance's stock price data to train a machine learning model for stock price prediction.
 
-#Technologies & Libraries
+# Technologies & Libraries
 The following technologies and libraries are used:
 
 Python: The tool is written in Python programming language.
@@ -20,7 +20,7 @@ NumPy: NumPy is used for data manipulation and mathematical computations, partic
 
 Bokeh: Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. It is used to create a line plot of real-time and predicted stock prices.
 
-#Workflow
+# Workflow
 The tool first authenticates the user's Twitter account to interact with the Twitter API using the Tweepy's OAuthHandler.
 
 A pre-trained DistilBERT model is loaded for sentiment analysis. This model is fine-tuned on the SST-2 task, which involves classifying text as expressing positive or negative sentiment.
